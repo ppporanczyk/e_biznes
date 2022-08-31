@@ -1,0 +1,39 @@
+POST    /register                   controllers.SignUpController.signUp
+POST    /login                      controllers.SignInController.signIn
+POST    /logout                     controllers.SignInController.signOut
+GET     /authenticate/:provider     controllers.SocialAuthController.authenticate(provider: String)
+
+GET     /user                       controllers.UserController.showAll()
+GET     /user/:id                   controllers.UserController.showById(id: Long)
+GET     /user/email/:email          controllers.UserController.getUserByEmail(email: String)
+
+GET     /product                    controllers.ProductController.showAll()
+GET     /product/category/:id       controllers.ProductController.getProductByCategory(id: Long)
+POST    /product                    controllers.ProductController.add()
+GET     /product/:id                controllers.ProductController.showById(id: Long)
+POST    /product/update/:id         controllers.ProductController.update(id: Long)
+GET     /product/delete/:id         controllers.ProductController.delete(id: Long)
+
+GET     /category                   controllers.CategoryController.showAll()
+POST    /category                   controllers.CategoryController.add()
+GET     /category/:id               controllers.CategoryController.showById(id: Long)
+POST    /category/update/:id        controllers.CategoryController.update(id: Long)
+GET     /category/delete/:id        controllers.CategoryController.delete(id: Long)
+
+GET     /payment                    controllers.PaymentController.showAll()
+POST    /payment                    controllers.PaymentController.add()
+GET     /payment/order/:id          controllers.PaymentController.getPaymentByOrder(id: Long)
+GET     /payment/:id                controllers.PaymentController.showById(id: Long)
+POST    /payment/update/:id         controllers.PaymentController.update(id: Long)
+GET     /payment/delete/:id         controllers.PaymentController.delete(id: Long)
+
+GET     /order                      controllers.OrderController.showAll()
+POST    /order                      controllers.OrderController.add()
+GET     /order/user/:id             controllers.OrderController.getOrderByUser(id: Long)
+GET     /order/:id                  controllers.OrderController.showById(id: Long)
+POST    /order/update/:id           controllers.OrderController.update(id: Long)
+GET     /order/delete/:id           controllers.OrderController.delete(id: Long)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file         controllers.Assets.versioned(path="/public", file: Asset)
