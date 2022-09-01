@@ -23,6 +23,4 @@ class AuthTokenService @Inject()(protected val dbConfigProvider: DatabaseConfigP
       ) += userId
   }
 
-//  def add(authToken: AuthToken): Future[AuthToken] =
-//    dbConfig.db.run(authTokens += authToken).map(_ => authToken)
 }

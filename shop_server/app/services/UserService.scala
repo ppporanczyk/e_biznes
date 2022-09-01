@@ -47,6 +47,4 @@ class UserService @Inject()(protected val dbConfigProvider: DatabaseConfigProvid
   private def toModel(dto: UserDto): User =
     User(dto.id, LoginInfo(dto.providerId, dto.providerKey), dto.email)
 
-  private def toDto(model: User): UserDto =
-    UserDto(model.id, model.loginInfo.providerID, model.loginInfo.providerKey, model.email)
 }

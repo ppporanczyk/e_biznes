@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {facebookLogin, getUserByEmail, githubLogin, googleLogin, login} from "../services/loginService";
+import {facebookLogin, getUserByEmail, googleLogin, login} from "../services/loginService";
 import UserContext from "../context/UserContext";
 
 

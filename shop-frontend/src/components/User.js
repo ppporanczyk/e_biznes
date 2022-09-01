@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import Register from "./Register";
 import Login from "./Login";
 import LogOut from "./LogOut";
