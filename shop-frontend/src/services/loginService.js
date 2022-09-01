@@ -1,13 +1,5 @@
 import axios from 'axios';
 
-
-export const  config = {
-    "Content-Type": "application/json",
-    "Access-Control-Allow-Methods": "*",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "*"
-}
-
 export const login = (email, password) => {
     return axios.post('http://localhost:9000/login', {
         email : email,
